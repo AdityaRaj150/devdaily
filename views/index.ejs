@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>daily.dev</title>
+  
+    <link href="./style.css" rel="stylesheet">
+    <link href="./mediaquery.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="./logo.ico">
+</head>
+<body>
+
+    <%- include('./partials/header') %>
+
+<div class="main">
+
+  <div class="banner">
+    <div class="image">
+        <img src="./images/logo.png">
+    </div>
+    <div class="banner-text">
+        <h1>Daily Dev</h1>
+        <div class="para"></div>
+    </div>
+
+</div>
+<div class="container">
+    <div onclick="learnreact()" class="course course1">
+        <h1>Learn React</h1>
+        <div class="course-logo"><img src="./images/react-js-icon.svg"></div>
+        <p>Learn React in detail step by step by learning new concepts daily in a concise format. you can also use it as reference.</p>
+
+    </div>
+    <div onclick="learnphp()" class="course course2">
+        <h1>Learn php</h1>
+        <div class="course-logo"><img src="./images/icons8-php.svg"></div>
+        <p>Learn php in detail step by step by learning new concepts daily in a concise format. you can also use it as reference.</p>
+
+    </div>
+    <div onclick="learncss()" class="course course3">
+        <h1>Learn CSS</h1>
+
+        <div class="course-logo"><img src="./images/icons8-css-logo.svg"></div>
+        <p>Learn CSS in detail step by step by learning new concepts daily in a concise format. you can also use it as reference.</p>
+
+    </div>
+</div>
+
+
+<div class="contactMe">
+    
+  <p class="contact-text"> you can catch me on here...</p>
+  <div class="contact-bar" id="contact-bar-id">
+
+    <div class="contact-box">
+      <a href="https://github.com/AdityaRaj150" target="_blank">
+        <div class="con"><img src="./images/icons8-github.svg"></div>
+      </a>
+      <p>Github</p>
+    </div>
+    <div class="contact-box"><a href="https://www.linkedin.com/in/aditya-raj-846018294/" target="_blank">
+        <div class="con"><img src="./images/icons8-linkedin.svg"></div>
+      </a>
+      <p>Linkedin</p>
+    </div>
+    <div class="contact-box"><a href="https://www.instagram.com/adi_yorozuya4/?next=%2F" target="_blank ">
+        <div class="con"><img src="./images/icons8-instagram.svg"></div>
+      </a>
+      <p>Instagram</p>
+    </div>
+    <div class="contact-box"><a href="mailto:adityaraj10544@gmail.com" target="_blank">
+        <div class="con"><img src="./images/reshot-icon-email-P9WA8LS724.svg">
+        </div>
+      </a>
+      <p>Email</p>
+    </div>
+  </div>
+</div>
+
+<%- include('./partials/footer') %>
+
+
+</div>
+   
+    <script src="./app.js" charset="UTF-8"></script>
+</body>
+</html>

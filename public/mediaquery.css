@@ -1,0 +1,234 @@
+
+
+@media screen and (max-width: 1204px) {
+    .container {
+        gap: 25px;
+        
+    }
+}
+
+@media screen and (max-width: 995px) {
+    .container {
+        display: flex;
+        gap: 20px;
+        width: 92% !important;
+    }
+
+    .course {
+        height: 250px;
+        gap: 10px;
+        padding: 15px;
+        
+    }
+
+    nav {
+        width: 80vw;
+    }
+}
+
+
+
+@media screen and (max-width: 886px) {
+    .container {
+        display: flex;
+        gap: 35px;
+        flex-direction: column;
+        width: 82% !important;
+    }
+
+    .course {
+        height: 300px !important;
+        width: 300px !important;
+        gap: 15px;
+        padding: 15px;
+        
+    }
+
+    nav {
+        width: 90vw;
+    }
+
+  
+
+}
+
+@media screen and (max-width: 746px) {
+    .container {
+    
+        display: flex;
+        gap: 35px;
+        flex-direction: column;
+        width: 100% !important;
+    }
+
+    .course {
+        height: 300px !important;
+        width: 300px !important;
+        gap: 15px;
+        padding: 15px;
+        
+    }
+    .banner {
+        margin: 50px 0 30px;
+    }
+
+    nav {
+        width: 97vw;
+    }
+
+    .main-learn{
+        margin: 130px 100px ;
+    }
+    
+    
+}
+
+@media screen and (max-width: 646px) {
+
+    nav {
+        width: 96vw;
+        gap: 0px;
+    }
+    .menu {
+        gap: 10px;
+    }
+
+    .contact-bar {
+        padding: 5px;
+        gap: 30px !important;
+    }
+    .contact-box {
+        gap: 5px;
+    }
+}
+
+
+@media screen and (max-width: 530px) {
+
+    nav {
+        opacity: 0;
+    }
+
+    .hamburger {
+        opacity: 1;
+        z-index: 10;
+    }
+    nav {
+        z-index: -3;
+    }
+
+    .contact-bar {
+        padding: 3px;
+        gap: 30px !important;
+    }
+    .contact-box {
+        gap: 5px;
+    }
+    .logo  {
+        gap: 2px !important;
+    }
+
+    .menu {
+        gap: 5px !important;
+    }
+}
+
+@media screen and (max-width: 646px) {
+
+    nav {
+        width: 96vw;
+        gap: 0px;
+    }
+    .menu {
+        gap: 10px;
+    }
+
+    .contact-bar {
+        padding: 5px;
+        gap: 30px !important;
+    }
+    .contact-box {
+        gap: 5px;
+    }
+
+    .main-learn {
+        margin: 130px 50px;
+    }
+ 
+}
+
+
+@media screen and (max-width: 530px) {
+
+    nav {
+        opacity: 0;
+    }
+
+    .hamburger {
+        opacity: 1;
+        z-index: 10;
+    }
+    nav {
+        z-index: -3;
+    }
+
+    .contact-bar {
+        padding: 3px;
+        gap: 30px !important;
+    }
+    .contact-box {
+        gap: 5px;
+    }
+    .logo  {
+        gap: 2px !important;
+    }
+
+    .menu {
+        gap: 5px !important;
+    }
+}
+
+
+@media screen and (max-width: 401px) {
+
+    .contact-bar {
+        padding: 0px;
+        gap: 5px !important;
+    }
+    .contact-box {
+        gap: 1px;
+    }
+
+    .menu {
+        gap: 0px !important;
+        padding: 0px !important;
+    }
+    .course {
+        padding: 0px;
+        width: 200px !important;
+    }
+    .banner{
+        flex-direction: column !important;
+    }
+}
+
+@media screen and (max-width: 401px) {
+
+    .contact-bar {
+        padding: 0px;
+        gap: 5px !important;
+    }
+    .contactMe {
+        margin: 0px;
+    }
+    .contactMe img{
+        width: 30px;
+    }
+}
+
+
+
+
+
+
+

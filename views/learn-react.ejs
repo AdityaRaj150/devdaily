@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ 
+    <link href="./style.css" rel="stylesheet">
+    <link href="./mediaquery.css" rel="stylesheet">
+</head>
+<body>
+    <%- include('./partials/header') %>
+
+    <div class="main-learn">
+        <div class="title">
+            <h1>JavaScript Refresher for React</h1>
+            <div class="title-para"><p> In this module, I provided a brief introduction into some
+                core next-gen JavaScript features, of course focusing on
+                the ones you'll see the most in this course. Here's a quick
+                summary!
+                </p></div>
+        </div>
+
+        <div class="box1">
+            <div class="heading">
+                <h2>ES6 Arrow Functions</h2>
+            </div>
+            <div class="sub-heading">
+                <p>Arrow functions are a diﬀerent way of creating functions in
+                    JavaScript. Besides a shorter syntax, they oﬀer advantages
+                    when it comes to keeping the scope of the this keyword
+                    (see here).
+                    Arrow function syntax may look strange but it's actually
+                    simple.
+                    <br>
+                    <br>
+                    function callMe(name) {
+                    console.log(name);
+                    }which you could also write as:
+                    <br>
+                    <br>
+                    const callMe = function(name) {
+                    console.log(name);
+                    }
+                    becomes:
+                    <br>
+                    <br>
+                    const callMe = (name) => {
+                    console.log(name);
+                    }
+                    Important:
+                    When having no arguments, you have to use empty
+                    parentheses in the function declaration:
+                    <br>
+                    <br>
+                    const callMe = () => {
+                    console.log('Max!');
+                    }
+                    When having exactly one argument, you may omit the
+                    parentheses:
+                    <br>
+                    <br>
+                    const callMe = name => {
+                    console.log(name);
+                    }
+                    When just returning a value, you can use the following
+                    shortcut:
+                    <br>
+                    
+                    const returnMe = name => name
+                    That's equal to:
+                    <br>
+                    <br>
+                    const returnMe = name => {
+                    return name;
+                    }</p>
+            </div>
+            <div class="heading">
+                <h2>Exports & Imports</h2>
+            </div>
+            <div class="sub-heading">
+                <p>You got two diﬀerent types of
+                    <br>
+                    
+                    exports: default (unnamed) and namedexports:
+                    <br>
+                    
+                    default => export default ...;
+                    named => export const someData = ...;
+                    You can import default exports like this:
+                    import someNameOfYourChoice from './path/to/
+                    file.js';
+                    <br>
+                    <br>
+                    Surprisingly, someNameOfYourChoice is totally up to you.
+                    Named exports have to be imported by their name:
+                    import { someData } from './path/to/file.js';
+                    <br>
+                    <br>
+                    A file can only contain one default and an unlimited amount
+                    of named exports. You can also mix the one default with
+                    any amount of named exports in one and the same file.
+                    When importing named exports, you can also import all
+                    named exports at once with the following syntax:
+                    <br>
+                    <br>
+                    import * as upToYou from './path/to/file.js';upToYou is - well - up to you and simply bundles all
+                    exported variables/functions in one JavaScript object. For
+                    example, if you export const someData = ... (/path/
+                    to/file.js ) you can access it on upToYou like
+                    this: upToYou.someData .</p>
+            </div>
+            <div class="heading">
+                <h2>Classes</h2>
+            </div>
+            <div class="sub-heading">
+                <p>Classes are a feature which basically replace constructor
+                    functions and prototypes. You can define blueprints for
+                    JavaScript objects with them.
+                    Like this:
+                    <br>
+                    <br>
+                    class Person {
+                    constructor () {
+                    this.name = 'Max';
+                    }
+                    }
+                    const person = new Person();
+                    console.log(person.name); // prints 'Max'
+                    In the above example, not only the class but also a property
+                    of that class (=> name ) is defined. They syntax you see
+                    there, is the "old" syntax for defining properties. In modern
+                    JavaScript projects (as the one used in this course), you
+                    can use the following, more convenient way of defining
+                    class properties:
+                    <br>
+                    <br>
+                    class Person {
+                    name = 'Max';
+                    }
+                    const person = new Person();
+                    console.log(person.name); // prints 'Max'
+                    You can also define methods. Either like this:.
+                    <br>
+                    <br>
+                    class Person {
+                    name = 'Max';
+                    printMyName () {
+                    console.log(this.name); // this is required to refer
+                    to the class!
+                    }
+                    }
+                    const person = new Person();
+                    person.printMyName();
+                    Or like this:
+                    <br>
+                    <br>
+                    class Person {
+                    name = 'Max';
+                    printMyName = () => {
+                    console.log(this.name);
+                    }
+                    }
+                    const person = new Person();
+                    person.printMyName();
+                    The second approach has the same advantage as all arrow
+                    functions have: The this keyword doesn't change its
+                    reference.
+                    You can also use inheritance when using classes:
+                    <br>
+                    <br>
+                    class Human {
+                    species = 'human';
+                    }
+                    class Person extends Human {
+                    name = 'Max';
+                    printMyName = () => {
+                    console.log(this.name);
+                    }
+                    }
+                    const person = new Person();.
+                    .
+                    person.printMyName();
+                    console.log(person.species); // prints 'human'</p>
+            </div>
+            <div class="heading">
+                <h2>
+                    Spread & Rest Operator</h2>
+            </div>
+            <div class="sub-heading">
+                <p>
+                    The spread and rest operators actually use the same
+                    syntax: ...
+                    Yes, that is the operator - just three dots. It's usage
+                    determines whether you're using it as the spread or rest
+                    operator.
+                    Using the Spread Operator:
+                    The spread operator allows you to pull elements out of an
+                    array (=> split the array into a list of its elements) or pull the
+                    properties out of an object. Here are two examples:
+                    <br>
+                    <br>
+                    const oldArray = [1, 2, 3];
+                    const newArray = [...oldArray, 4, 5]; // This now is [1, 2,
+                    3, 4, 5];
+                    Here's the spread operator used on an object:
+                    <br>
+                    <br>
+                    const oldObject = {
+                    name: 'Max'
+                    };
+                    const newObject = {
+                    ...oldObject,
+                    age: 28
+                    };
+                    <br>
+                    <br>
+                    {
+                    name: 'Max',
+                    age: 28
+                    }
+                    The spread operator is extremely useful for cloning arrays
+                    and objects. Since both are reference types (and notprimitives), copying them safely (i.e. preventing future
+                    mutation of the copied original) can be tricky. With the
+                    spread operator you have an easy way of creating a
+                    (shallow!) clone of the object or array.
+                    Destructuring
+                    Destructuring allows you to easily access the values of
+                    arrays or objects and assign them to variables.
+                    Here's an example for an array:
+                    <br>
+                    <br>
+                    const array = [1, 2, 3];
+                    const [a, b] = array;
+                    console.log(a); // prints 1
+                    console.log(b); // prints 2
+                    console.log(array); // prints [1, 2, 3]
+                    And here for an object:
+                    <br>
+                    <br>
+                    const myObj = {
+                    name: 'Max',
+                    age: 28
+                    }
+                    const {name} = myObj;
+                    console.log(name); // prints 'Max'
+                    console.log(age); // prints undefined
+                    console.log(myObj); // prints {name: 'Max', age: 28}
+                    Destructuring is very useful when working with function
+                    arguments. Consider this example:
+                    <br>
+                    <br>
+                    const printName = (personObj) => {
+                    console.log(personObj.name);
+                    }
+                    printName({name: 'Max', age: 28}); // prints 'Max'
+                    Here, we only want to print the name in the function but we
+                    pass a complete person object to the function. Of course
+                    this is no issue but it forces us to call personObj.nameinside of our function. We can condense this code with
+                    destructuring:
+                    <br>
+                    <br>
+                    const printName = ({name}) => {
+                    console.log(name);
+                    }
+                    printName({name: 'Max', age: 28}); // prints 'Max')
+                    We get the same result as above but we save some code.
+                    By destructuring, we simply pull out the name property and
+                    store it in a variable/ argument named name which we then
+                    can use in the function body.</p>
+            </div>
+
+        </div>
+       
+        <%- include('./partials/footer') %>
+    </div>
+ 
+    <script src="./app.js" charset="UTF-8"></script>
+</body>
+</html>
