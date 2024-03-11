@@ -5,6 +5,9 @@
         gap: 25px;
         
     }
+    .about-para {
+        width: 500px;
+    }
 }
 
 @media screen and (max-width: 995px) {
@@ -185,6 +188,13 @@
 
     .menu {
         gap: 5px !important;
+    }
+    .box1-about {
+        width: 50px;
+        margin: auto;
+    }
+    .about-para {
+        width: 200px;
     }
 }
 

@@ -386,8 +386,13 @@ footer p {
   }
   
 
-
+html{
+    scroll-behavior: smooth;
+}
   .title p, .box1 p{
     font-size: 20px;
   }
 
+  .title-about {
+    text-align: center;
+  }
